@@ -34,4 +34,6 @@ Upon executing the command, a directory named 'SeqSero_result_<time_you_run_SeqS
 
 # Citation
 _S. Zhang, Y. Yin, M.B. Jones, Z. Zhang, B.L. Deatherage Kaiser, B.A. Dinsmore, C. Fitzgerald, P.I. Fields, X. Deng. Salmonella serotype determination utilizing high-throughput genome sequencing data.J Clin Microbiol, 53 (2015), pp. 1685-1692_ ([paper source](http://jcm.asm.org/content/early/2015/03/05/JCM.00323-15))
-
+Zhang S, Yin Y, Jones MB, Zhang Z, Deatherage Kaiser BL, Dinsmore BA, Fitzgerald C, Fields PI, Deng X.
+Salmonella serotype determination utilizing high-throughput genome sequencing data.
+**J Clin Microbiol.** 2015 May;53(5):1685-92.[PMID:25762776](http://jcm.asm.org/content/early/2015/03/05/JCM.00323-15)
