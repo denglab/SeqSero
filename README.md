@@ -21,13 +21,13 @@ SeqSero depends on:
 6. [isPcr](http://hgwdev.cse.ucsc.edu/~kent/exe/linux/) written by Jim Kent. 
 
 # Executing the code 
-Usage: SeqSero.py 
+%Usage: SeqSero.py 
 
--m <int> (input data type, '1' for interleaved paired-end reads , '2' for separated paired-end reads, '3' for single reads, '4' for genome assembly) 
+%-m <int> (input data type, '1' for interleaved paired-end reads , '2' for separated paired-end reads, '3' for single reads, '4' for genome assembly) 
 
--i <file> (/path/to/input/file) 
+%-i <file> (/path/to/input/file) 
 
--b <string> (algorithms for bwa mapping; 'mem' for mem, 'sam' for samse/sampe; default=sam; optional) 
+%-b <string> (algorithms for bwa mapping; 'mem' for mem, 'sam' for samse/sampe; default=sam; optional) 
 
 # Output 
 Upon executing the command, a directory named 'SeqSero_result_<time_you_run_SeqSero>' will be created. Your result will be stored in 'Seqsero_result.txt' in that directory
