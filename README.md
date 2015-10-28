@@ -7,10 +7,15 @@ SeqSero is a pipeline for Salmonella serotype determination from raw sequencing 
 
 # Dependencies 
 SeqSero depends on:
+
 1. Python 2.7 and [Biopython 1.65](http://biopython.org/wiki/Download); 
+
 2. [Burrows-Wheeler Aligner](http://sourceforge.net/projects/bio-bwa/files/); 
+
 3. [Samtools](http://sourceforge.net/projects/samtools/files/samtools/);
+
 4. [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download);
+
 5. [SRA Toolkit](http://www.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?cmd=show&f=software&m=software&s=software)
 
 
@@ -18,8 +23,11 @@ Make sure all the executables are added to your search path. SeqSero also uses t
 
 # Executing the code 
 Usage: SeqSero.py 
+
 -m <int> (input data type, '1' for interleaved paired-end reads , '2' for separated paired-end reads, '3' for single reads, '4' for genome assembly) 
+
 -i <file> (/path/to/input/file) 
+
 -b <string> (algorithms for bwa mapping; 'mem' for mem, 'sam' for samse/sampe; default=sam; optional) 
 
 # Output 
