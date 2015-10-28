@@ -33,5 +33,5 @@ Usage: SeqSero.py
 Upon executing the command, a directory named 'SeqSero_result_<time_you_run_SeqSero>' will be created. Your result will be stored in 'Seqsero_result.txt' in that directory
 
 # Citation
-_S. Zhang, Y. Yin, M.B. Jones, Z. Zhang, B.L. Deatherage Kaiser, B.A. Dinsmore, C. Fitzgerald, P.I. Fields, X. Deng. Salmonella serotype determination utilizing high-throughput genome sequencing data.J Clin Microbiol, 53 (2015), pp. 16-1692_ ([paper source](http://jcm.asm.org/content/early/2015/03/05/JCM.00323-15))
+_S. Zhang, Y. Yin, M.B. Jones, Z. Zhang, B.L. Deatherage Kaiser, B.A. Dinsmore, C. Fitzgerald, P.I. Fields, X. Deng. Salmonella serotype determination utilizing high-throughput genome sequencing data.J Clin Microbiol, 53 (2015), pp. 1685-1692_ ([paper source](http://jcm.asm.org/content/early/2015/03/05/JCM.00323-15))
 
