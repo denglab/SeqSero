@@ -10,7 +10,7 @@ SeqSero depends on:
 1. Python 2.7 and [Biopython 1.65](http://biopython.org/wiki/Download) 
 2. [Burrows-Wheeler Aligner](http://sourceforge.net/projects/bio-bwa/files/) 
 3. [Samtools](http://sourceforge.net/projects/samtools/files/samtools/)
-4. [NCBI BLAST](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/)
+4. [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
 5. [SRA Toolkit](http://www.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?cmd=show&f=software&m=software&s=software)
 
 
