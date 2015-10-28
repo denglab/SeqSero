@@ -16,10 +16,9 @@ SeqSero depends on:
 
 4. [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download);
 
-5. [SRA Toolkit](http://www.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?cmd=show&f=software&m=software&s=software)
+5. [SRA Toolkit](http://www.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?cmd=show&f=software&m=software&s=software);
 
-
-Make sure all the executables are added to your search path. SeqSero also uses the in silico PCR program (isPcr) written by [Jim Kent](http://hgwdev.cse.ucsc.edu/~kent/exe/linux/), which is supplied by the SeqSero package. 
+6. [isPcr](http://hgwdev.cse.ucsc.edu/~kent/exe/linux/) written by Jim Kent. 
 
 # Executing the code 
 Usage: SeqSero.py 
