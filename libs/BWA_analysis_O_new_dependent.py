@@ -29,7 +29,7 @@ def BWA_O_analysis(sra_name,additional_file,database,mapping_mode,file_mode):
       os.system("perl "+dirpath+"/split_interleaved_fastq.pl --input "+core_id+".fastq --output "+core_id+".fastq")    
       for_fq=core_id+"-read1.fastq"
       rev_fq=core_id+"-read2.fastq"
-      if os.path.getsize(for_fq)<=15000:#09092015
+      if os.path.getsize(for_fq)<=15000 or os.path.getsize(rev_fq)<=15000:#09092015#12292015
         os.system("echo haha")#09092015
         os.system("perl "+dirpath+"/splitPairedEndReads.pl "+core_id+".fastq")#09092015
         os.system("mv "+core_id+".fastq_1 "+for_fq)##09092015
