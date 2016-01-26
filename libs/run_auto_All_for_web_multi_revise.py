@@ -220,7 +220,7 @@ def Test(file1,additional_file,file_mode,mapping_mode,z,q):
         star="*"#
         star_line="Detected the deletion of O5-."
   new_file=open("Seqsero_result.txt","w")
-  new_file.write("Input files:\t"+thename+"\n"+"O antigen prediction:\t"+"O-"+Otype+"\n"+"H1 antigen prediction(fliC):\t"+fliC+"\n"+"H2 antigen prediction(fljB):\t"+fljB+"\n"+"Predicted antigenic profile:\t"+predict_form+"\n"+"Predicted serotype(s):\t"+predict_sero+star+"\n"+star+star_line+claim+"\n")#+##
+  new_file.write("Input files:\t"+thename+" "+additional_file+"\n"+"O antigen prediction:\t"+"O-"+Otype+"\n"+"H1 antigen prediction(fliC):\t"+fliC+"\n"+"H2 antigen prediction(fljB):\t"+fljB+"\n"+"Predicted antigenic profile:\t"+predict_form+"\n"+"Predicted serotype(s):\t"+predict_sero+star+"\n"+star+star_line+claim+"\n")#+##
   new_file.close()
   os.system("rm temp_result_"+str(q)+"*.txt")###01/28/2015
   os.system("rm result.txt")###01/28/2015
