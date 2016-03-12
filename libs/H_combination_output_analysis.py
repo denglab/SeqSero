@@ -57,7 +57,7 @@ if os.path.getsize(fliC)>10:
             for i in range(len(startlist)):#
               if startlist[i]<start<endlist[i]:#
                 start=endlist[i]+1#
-              if startlist[i]<endlist[i]:#
+              if startlist[i]<end<endlist[i]:#03112016
                 end=startlist[i]-1#
             if end<start:#the new hsp was included in old hsp#
               percentage=0#
@@ -150,7 +150,7 @@ if os.path.getsize(fljB)>10:
             for i in range(len(startlist)):#
               if startlist[i]<start<endlist[i]:#
                 start=endlist[i]+1#
-              if startlist[i]<endlist[i]:#
+              if startlist[i]<end<endlist[i]:#03112016
                 end=startlist[i]-1#
             if end<start:#the new hsp was included in old hsp#
               percentage=0#
