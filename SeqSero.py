@@ -38,6 +38,7 @@ def main():
       fnameA=dataset[0].split("/")[-1]
       fnameB=dataset[1].split("/")[-1]
       os.chdir(make_dir)
+      print "check fastq id and make them in accordance with each other...please wait..."
       os.system("python2.7 "+dirpath+"/libs/run_auto_All_for_web_multi_revise.py "+fnameA+" "+mapping_mode+" "+fnameB+" 2")
       print "\n\n\nResult:\n"
       os.system("cat Seqsero_result.txt")
