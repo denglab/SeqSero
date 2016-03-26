@@ -196,6 +196,12 @@ def Test(file1,additional_file,file_mode,mapping_mode,z,q):
       star="*"#
       star_line="Additional characterization is necessary to assign a serotype to this strain.  Commonly circulating strains of serotype Enteritidis are sdf+, although sdf- strains of serotype Enteritidis are known to exist. Serotype Gallinarum is typically sdf- but should be quite rare. Sdf- strains of serotype Enteritidis and serotype Gallinarum can be differentiated by phenotypic profile or genetic criteria.\n"#+##
       predict_sero="See comments below"#
+  elif predict_form=="4:i:-":#03252016#
+    predict_sero="potentially monophasic variant of Typhimurium"#03252016#
+  elif predict_form=="4:r:-":#03252016#
+    predict_sero="potentially monophasic variant of Heidelberg"#03252016# 
+  elif predict_form=="4:b:-":#03252016#
+    predict_sero="potentially monophasic variant of Paratyphi B "+"(but still a very small chance to be "+predict_sero.strip()+")"#03252016# 
   claim="The serotype(s) is/are the only serotype(s) with the indicated antigenic profile currently recognized in the Kauffmann White Scheme.  New serotypes can emerge and the possibility exists that this antigenic profile may emerge in a different subspecies.  Identification of strains to the subspecies level should accompany serotype determination; the same antigenic profile in different subspecies is considered different serotypes."##
   if "N/A" in predict_sero:###added after standalone version, 2015/2/3
     claim=""###added after standalone version, 2015/2/3
@@ -204,7 +210,7 @@ def Test(file1,additional_file,file_mode,mapping_mode,z,q):
   new_file.write(file2+"\t"+"O-"+Otype+"\t"+fliC+"\t"+fljB+"\t"+Otype+":"+fliC+":"+fljB+"\t"+(" or ").join(seronames)+"\t"+answer+"\t"+suspect+"\n")
   new_file.close()
   '''
-  if predict_sero=="Typhimurium" or predict_form=="4:i:-":
+  if "Typhimurium" in predict_sero or predict_form=="4:i:-":#03252016#
     if file_mode=="1":
       os.system('python '+dirpath+'/deletion_compare.py '+real_file+' oafA '+mapping_mode+' 1 >temp_result_'+str(q)+'Typhim.txt')###02/06/2015
     if file_mode=="2":
@@ -216,7 +222,7 @@ def Test(file1,additional_file,file_mode,mapping_mode,z,q):
     handle=handle.readlines()
     for line in handle:
       if "$$$Typhimurium_O5-" in line:
-        predict_sero="Typhimurium_O5-"
+        predict_sero=predict_sero.strip()+"(O5-)"#03252016#
         star="*"#
         star_line="Detected the deletion of O5-."
   new_file=open("Seqsero_result.txt","w")
