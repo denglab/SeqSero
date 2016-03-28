@@ -231,7 +231,7 @@ def Test(file1,additional_file,file_mode,mapping_mode,z,q):
   os.system("rm temp_result_"+str(q)+"*.txt")###01/28/2015
   os.system("rm result.txt")###01/28/2015
   os.system("rm -rf database")###01/28/2015
-  os.system("rm *.fq *.fastq *.sam *.bam *.sai")###02/07/2015
+  os.system("rm -f *.fq *.fastq *.sam *.bam *.sai")###02/07/2015
   #os.system("rm "+for_fq)###01/28/2015
   #os.system("rm "+rev_fq)###01/28/2015
   #os.system("rm "+for_sai)
