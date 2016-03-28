@@ -201,7 +201,11 @@ def Test(file1,additional_file,file_mode,mapping_mode,z,q):
   elif predict_form=="4:r:-":#03252016#
     predict_sero="potential monophasic variant of Heidelberg"#03252016# 
   elif predict_form=="4:b:-":#03252016#
-    predict_sero="potential monophasic variant of Paratyphi B"#03252016# 
+    predict_sero="potential monophasic variant of Paratyphi B"#03252016#
+  elif predict_form=="8:e,h:1,2":#03282016#
+    predict_sero="Newport"#03282016#
+    star="*"##03282016#
+    star_line="Serotype Bardo shares the same antigenic profile with Newport, but Bardo is exceedingly rare."#03282016#
   claim="The serotype(s) is/are the only serotype(s) with the indicated antigenic profile currently recognized in the Kauffmann White Scheme.  New serotypes can emerge and the possibility exists that this antigenic profile may emerge in a different subspecies.  Identification of strains to the subspecies level should accompany serotype determination; the same antigenic profile in different subspecies is considered different serotypes."##
   if "N/A" in predict_sero:###added after standalone version, 2015/2/3
     claim=""###added after standalone version, 2015/2/3
