@@ -5,7 +5,7 @@
 # All Rights Reserved
 ############################################################################
 
-import argparse,os,sys,time
+import argparse,os,sys,time,random
 
 def main():
   parser = argparse.ArgumentParser(usage='SeqSero.py -m <data_type> -i <input_data> [-b <BWA_algorithm>]\n\nDevelopper: Shaokang Zhang (zskzsk@uga.edu) and Xiangyu Deng (xdeng@uga.edu)\n\nContact email:seqsero@gmail.com')
@@ -18,6 +18,7 @@ def main():
     os.system(dirpath+"/SeqSero.py -h")
   else:
     request_id = time.strftime("%m_%d_%Y_%H_%M_%S", time.localtime())
+    request_id += str(random.randint(1, 10000000))
     make_dir="SeqSero_result_"+request_id
     os.system("mkdir "+make_dir)
     os.system("cp -rf "+dirpath+"/database "+make_dir)
