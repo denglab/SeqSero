@@ -134,7 +134,7 @@ def Test(file1,additional_file,file_mode,mapping_mode,z,q):
       elif phase1[i].count("[")>=1:
         c=[]
         b=[]
-        if phase1[i][0]=="[" and phase1[i][-1]=="]" and phase1[i].count("[")==1:
+        if phase1[i][0]=="[" and phase1[i][-1]=="]" and phase1[i].count("[")==1:#for specific situations like [1,5]
           content=phase1[i].replace("[","").replace("]","")
           fliC_combine.append(content)
           fliC_combine.append("-")
