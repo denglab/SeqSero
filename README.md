@@ -1,4 +1,4 @@
-# SeqSero
+# SeqSero 1.0
 Salmonella serotyping from genome sequencing data
 
 
