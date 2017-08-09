@@ -11,7 +11,7 @@ def main():
   parser = argparse.ArgumentParser(usage='SeqSero.py -m <data_type> -i <input_data> [-b <BWA_algorithm>]\n\nDevelopper: Shaokang Zhang (zskzsk@uga.edu) and Xiangyu Deng (xdeng@uga.edu)\n\nContact email:seqsero@gmail.com')
   parser.add_argument("-m", choices=['1','2','3', '4'],help="<int>: '1'(pair-end reads, interleaved),'2'(pair-end reads, seperated),'3'(single-end reads), '4'(assembly)")
   parser.add_argument("-i", nargs="+", help="<string>: path/to/input_data")
-  parser.add_argument("-b",choices=['sam','mem'],default="sam",help="<string>: 'sam'(bwa samse/sampe), 'mem'(bwa mem), default=sam") 
+  parser.add_argument("-b",choices=['sam','mem','nanopore'],default="sam",help="<string>: 'sam'(bwa samse/sampe), 'mem'(bwa mem), default=sam") 
   args=parser.parse_args()
   dirpath = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
   if len(sys.argv)==1:

@@ -93,12 +93,16 @@ def BWA_O_analysis(sra_name,additional_file,database,mapping_mode,file_mode):
       os.system("bwa sampe "+database+" "+for_sai+" "+ rev_sai+" "+for_fq+" "+rev_fq+" > "+sam)
     elif mapping_mode=="mem":
       os.system("bwa mem "+database+" "+for_fq+" "+rev_fq+" > "+sam) #2014/12/23
+    elif mapping_mode=="nanopore": ##
+      os.system("bwa mem -x ont2d "+database+" "+for_fq+" "+rev_fq+" > "+sam)##
   else:
     if mapping_mode=="mem":
       os.system("bwa mem "+database+" "+for_fq+" > "+sam) #2014/12/23
     elif mapping_mode=="sam":
       os.system("bwa aln "+database+" "+for_fq+" > "+for_sai)
       os.system("bwa samse "+database+" "+for_sai+" "+for_fq+" > "+sam)
+    elif mapping_mode=="nanopore":##
+      os.system("bwa mem -x ont2d "+database+" "+for_fq+" > "+sam)##
   os.system("samtools view -F 4 -Sbh "+sam+" > "+bam)
   os.system("samtools view -h -o "+sam+" "+bam)
 
@@ -194,6 +198,8 @@ def assembly(sra_name,potential_choice,for_fq,rev_fq,for_sai,rev_sai,sam,bam,map
     elif mapping_mode=="sam":
       os.system("bwa aln database/"+database+" "+for_fq+" > "+for_sai)
       os.system("bwa samse database/"+database+" "+for_sai+" "+for_fq+" > "+sam)
+    elif mapping_mode=="nanopore":##
+      os.system("bwa mem -x ont2d database/"+database+" "+for_fq+" > "+sam)##
   else:
     if mapping_mode=="mem":
       os.system("bwa mem database/"+database+" "+for_fq+" "+rev_fq+" > "+sam) #2014/12/23
@@ -201,6 +207,8 @@ def assembly(sra_name,potential_choice,for_fq,rev_fq,for_sai,rev_sai,sam,bam,map
       os.system("bwa aln database/"+database+" "+for_fq+" > "+for_sai)
       os.system("bwa aln database/"+database+" "+rev_fq+" > "+rev_sai)
       os.system("bwa sampe database/"+database+" "+for_sai+" "+ rev_sai+" "+for_fq+" "+rev_fq+" > "+sam)
+    elif mapping_mode=="nanopore":
+      os.system("bwa mem -x ont2d database/"+database+" "+for_fq+" "+rev_fq+" > "+sam)
   os.system("samtools view -F 4 -Sbh "+sam+" > "+bam)
   os.system("samtools view -h -o "+sam+" "+bam)
   os.system("cat "+sam+"|awk '{if ($5>0) {print $10}}'>"+sam+"_seq.txt")

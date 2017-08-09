@@ -72,12 +72,16 @@ def BWA_analysis(sra_name,additional_file,database,mapping_mode,file_mode,z):
       os.system("bwa aln database/"+database+" "+for_fq+" > "+for_sai)
       os.system("bwa aln database/"+database+" "+rev_fq+" > "+rev_sai)
       os.system("bwa sampe database/"+database+" "+for_sai+" "+ rev_sai+" "+for_fq+" "+rev_fq+" > "+sam)
+    elif mapping_mode=="nanopore":
+      os.system("bwa mem -x ont2d database/"+database+" "+for_fq+" "+rev_fq+" > "+sam)
   else:
     if mapping_mode=="mem":
       os.system("bwa mem database/"+database+" "+for_fq+" > "+sam) #2014/12/23
     elif mapping_mode=="sam":
       os.system("bwa aln database/"+database+" "+for_fq+" > "+for_sai)
       os.system("bwa samse database/"+database+" "+for_sai+" "+for_fq+" > "+sam)
+    elif mapping_mode=="nanopore":
+      os.system("bwa mem -x ont2d database/"+database+" "+for_fq+" > "+sam) 
   os.system("samtools view -F 4 -Sbh "+sam+" > "+bam)
   os.system("samtools view -h -o "+sam+" "+bam)
   file=open(sam,"r")
@@ -376,12 +380,16 @@ def assembly(type,sra_name,for_fq,rev_fq,for_sai,rev_sai,sam,bam,database,databa
       os.system("bwa aln database/"+database+" "+for_fq+" > "+for_sai)
       os.system("bwa aln database/"+database+" "+rev_fq+" > "+rev_sai)
       os.system("bwa sampe database/"+database+" "+for_sai+" "+ rev_sai+" "+for_fq+" "+rev_fq+" > "+sam)
+    elif mapping_mode=="nanopore":
+      os.system("bwa mem -x ont2d database/"+database+" "+for_fq+" "+rev_fq+" > "+sam) 
   else:
     if mapping_mode=="mem":
       os.system("bwa mem database/"+database+" "+for_fq+" > "+sam) #2014/12/23
     elif mapping_mode=="sam":
       os.system("bwa aln database/"+database+" "+for_fq+" > "+for_sai)
       os.system("bwa samse database/"+database+" "+for_sai+" "+for_fq+" > "+sam)
+    elif mapping_mode=="nanopore":
+      os.system("bwa mem -x ont2d database/"+database+" "+for_fq+" > "+sam)
   
   os.system("samtools view -F 4 -Sbh "+sam+" > "+bam)
   os.system("samtools view -h -o "+sam+" "+bam)
