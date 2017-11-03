@@ -154,6 +154,7 @@ def BWA_O_analysis(sra_name,additional_file,database,mapping_mode,file_mode):
         if "sdf" in x[0] and x[1]>3:#
           qq=0#
           print "$$$",x[0],"got a hit, reads:",x[1]#
+          final_O.remove(x)
       if qq!=0:#
         print "$$$No sdf exists"#
 
